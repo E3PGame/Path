@@ -1,15 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SettingManager : MonoBehaviour {
+public class SettingManager : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+	// Singleton
+	public static SettingManager Instance;
+
+
+	#region MONO METHODS
+
+	void Awake ()
+	{
+		Instance = this;
+	}
+
+	void Start ()
+	{
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+	{
 	
 	}
+
+	#endregion
 }

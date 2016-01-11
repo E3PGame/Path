@@ -1,15 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour {
+public enum GameState
+{
+	Playing,
+	GameOver,
+	DrawingPath,
+	Other
+}
 
-	// Use this for initialization
-	void Start () {
+public class GameManager : MonoBehaviour
+{
+	#region PUBLIC VARIABLES
+
+	// Singleton
+	public static GameManager Instance;
+
+	public GameObject pinPrefab;
+	public GameState State;
+
+	#endregion
+
+	#region PRIVATE VARIABLES
+
+
+	#endregion
+
+	#region MONO METHODS
+
+	void Awake ()
+	{
+		Instance = this;
+	}
+
+	void Start ()
+	{
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+	{
 	
 	}
+
+	#endregion
+
 }

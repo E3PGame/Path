@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+	// Singleton
+	public static LevelManager Instance;
+
+	#region MONO METHODS
+
+	void Awake ()
+	{
+		Instance = this;
+	}
+
+	void Start ()
+	{
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+	{
 	
 	}
+
+	#endregion
 }
